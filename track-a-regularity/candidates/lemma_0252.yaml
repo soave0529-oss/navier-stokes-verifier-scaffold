@@ -1,0 +1,35 @@
+id: lemma_0252
+generated_by: codex-definition-tightening-step39
+date: '2026-05-19'
+statement_en: |
+  Let u be a smooth divergence-free mean-zero solution of the 3D incompressible Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force on [0,T).
+  For 0 < r <= 1 and 0 < t0 < T, define the periodic parabolic cylinder Q_r(x0,t0) = B_r(x0) x (t0 - r^2, t0), with B_r interpreted on the periodic lift when needed.
+  Let omega = curl u and define the localized enstrophy concentration E_r(x0,t0) = r^{-1} integral_{t0-r^2}^{t0} integral_{B_r(x0)} |omega(x,t)|^2 dx dt, so the scaling exponent is beta = 1.
+  If sup_{x0,t0,r} E_r(x0,t0) is finite on [0,T), then u extends smoothly past time T.
+statement_lean_skel: |
+  -- Definition-tightened parabolic Morrey enstrophy candidate.
+  def lemma_0252_parabolic_morrey_enstrophy_exact_statement : Prop := True
+type: hypothesis_complete_v3_definition_tightened
+related_known:
+- Step35DefinitionRules
+- CKN1982PartialRegularityVocabulary
+- THEOREM_MAP:regularity-gap
+why_interesting: Exact parabolic Morrey enstrophy rewrite of the Step 33 selected family. It supplies Q_r geometry, beta = 1 scaling, supremum domain, and smooth-class conclusion. Survival is not truth.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  known_results_check: pending
+  novelty_check: pending
+  hypothesis_completeness_check: pending
+  endpoint_check: pending
+  convex_integration_check: pending
+  pressure_proxy_check: pending
+  definition_rule_check: pending
+  known_control_extension_check: pending
+  duplicate_family_check: pending
+  solution_class_check: pending
+status: pending
+expected_evaluator:
+  status: needs_review
+  reason: Proof-obligation memo found no finite-bound-to-smallness route; this should not be expert-routed until a compactness/Liouville or epsilon-pressure rewrite exists.

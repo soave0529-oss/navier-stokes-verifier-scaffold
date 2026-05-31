@@ -1,0 +1,29 @@
+id: lemma_0231
+generated_by: codex-deterministic-variation-round-3
+date: '2026-05-19'
+statement_en: Let u be a smooth divergence-free mean-zero solution of the 3D incompressible Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force on [0,T). If a scale-critical Besov-type norm of u remains integrable in time on [0,T) with cycle-3 normalization conventions made explicit, then u extends smoothly past time T.
+statement_lean_skel: '-- Deterministic candidate round 3.
+
+  def lemma_0231_critical_besov_control : Prop := True
+
+  '
+type: hypothesis_complete_v3_unresolved
+related_known:
+- Step31EvaluatorV3
+- THEOREM_MAP:regularity-gap
+why_interesting: Besov-style critical control without BKM sup-vorticity input.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  known_results_check: pending
+  novelty_check: pending
+  hypothesis_completeness_check: pending
+  endpoint_check: pending
+  convex_integration_check: pending
+  solution_class_check: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: critical_space_known_result_check
+  reason: Broad critical Besov language overlaps known critical-space criteria until exact indices and novelty are supplied.

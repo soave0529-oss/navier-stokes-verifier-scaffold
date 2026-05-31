@@ -1,0 +1,23 @@
+name = "NavierStokesProgram"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["NavierStokesProgram"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.27.0"
+
+[[require]]
+name = "formal_conjectures"
+path = "../../refs/upstream/clones/formal-conjectures"
+
+[[lean_lib]]
+name = "NavierStokesProgram"
+[lean_lib.leanOptions]
+warn.sorry = false

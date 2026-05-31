@@ -1,0 +1,35 @@
+id: lemma_0005
+generated_by: codex-human-seed
+date: 2026-05-19
+statement_en: |
+  In the Re=1600 Taylor-Green validation scenario used by Track B, the
+  high-frequency spectrum-tail diagnostic remains <= 0.05 for every sampled
+  time 0 <= t <= 10.
+statement_lean_skel: |
+  -- Intentionally numerical false seed, not a PDE theorem.
+  theorem lemma_0005_bad_taylor_green_tail_bound
+    (run : TaylorGreenValidationRun)
+    (hRe : run.re = 1600)
+    (hT : run.tEnd = 10) :
+    forall t in run.sampleTimes, SpectrumTail run t <= 0.05 := by
+    sorry
+type: intentionally_bad_numerical
+related_known:
+  - Step6TaylorGreen
+  - Step7Diagnostics
+why_interesting: |
+  Negative-control seed for the numerical sanity check. Step 7 measured max
+  spectrum_tail = 0.1967015480 at t=10 in TG_N64_t10, so this statement should
+  fail against existing Track B artifacts without any new solver run.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: taylor_green_test
+  reason: Existing Step 7 diagnostics show spectrum_tail > 0.05 by late time.
+status: pending

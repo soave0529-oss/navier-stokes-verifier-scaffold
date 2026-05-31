@@ -1,0 +1,38 @@
+id: lemma_0001
+generated_by: codex-human-seed
+date: 2026-05-19
+statement_en: |
+  Let u be a smooth divergence-free mean-zero solution of the 3D incompressible
+  Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force, defined
+  on [0,T). If the vorticity omega = curl u satisfies
+  integral_0^T ||omega(t)||_{L^infty(T^3)} dt < infinity, then u extends as a
+  smooth solution past time T.
+statement_lean_skel: |
+  -- BKM-style continuation criterion, target skeleton only.
+  theorem lemma_0001_bkm_continuation
+    (u : SmoothPeriodicNSESolution T3)
+    (hdiv : IsDivergenceFree u)
+    (hmean : MeanZero u)
+    (homega : IntegrableOnTime (fun t => LInfinityNorm (curl (u t))) 0 T) :
+    ExtendsSmoothlyPast u T := by
+    sorry
+type: blow_up_criterion
+related_known:
+  - BKM1984
+  - THEOREM_MAP:BKM
+why_interesting: |
+  Positive-control seed. Step 7 now produces omega_inf(t), so the numerical
+  evaluator can at least check that the diagnostic quantity required by this
+  criterion is available.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+expected_evaluator:
+  status: pass
+  reason: Known BKM continuation criterion; should be consistent with scaling,
+    Galilean invariance, and known-results checks.
+status: pending

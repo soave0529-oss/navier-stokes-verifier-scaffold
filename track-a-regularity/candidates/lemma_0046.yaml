@@ -1,0 +1,22 @@
+id: lemma_0046
+generated_by: codex-deterministic-variation-round-1
+date: '2026-05-19'
+statement_en: Let u be a smooth divergence-free mean-zero solution of the 3D incompressible Navier-Stokes equations on T^3. If sup_{0 <= t < T} ||u(t)||_L2(T^3) < infinity, then u extends smoothly past time T.
+statement_lean_skel: "-- Deterministic candidate round 1.\ntheorem lemma_0046_bad_scaling_energy_control\n  (u : SmoothPeriodicNSESolution T3) :\n  ExtendsSmoothlyPast u T := by\n  sorry\n"
+type: intentionally_bad_scaling
+related_known:
+- Leray1934
+- THEOREM_MAP:weak-solution-guardrail
+why_interesting: Negative variation. It intentionally confuses weak-level energy control with smooth continuation control.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: scaling_check
+  reason: Finite-energy/L2-only continuation should be rejected.

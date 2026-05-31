@@ -1,0 +1,18 @@
+{
+  "energy_end": 0.07013487910011965,
+  "energy_start": 0.12500000000000006,
+  "enstrophy_end": 10.16216338133031,
+  "enstrophy_growth_rate_max": 3.11327142749078,
+  "enstrophy_growth_rate_peak_t": 6.7,
+  "enstrophy_start": 0.3750000000000001,
+  "max_divergence": 4.1798409662588216e-16,
+  "omega_inf_max": 21.875516800346226,
+  "omega_inf_peak_t": 7.6000000000000005,
+  "omega_l2_mean_max": 4.629505551844227,
+  "omega_l2_mean_peak_t": 9.200000000000001,
+  "rows": 101,
+  "spectrum_tail_max": 0.19670154804884177,
+  "spectrum_tail_peak_t": 10.0,
+  "t_end": 10.0,
+  "t_start": 0.0
+}

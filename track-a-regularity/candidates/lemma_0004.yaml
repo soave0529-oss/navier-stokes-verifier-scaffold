@@ -1,0 +1,36 @@
+id: lemma_0004
+generated_by: codex-human-seed
+date: 2026-05-19
+statement_en: |
+  Let u be a smooth divergence-free mean-zero solution of the 3D incompressible
+  Navier-Stokes equations on T^3. If sup_{0 <= t < T} ||u(t)||_{L^2(T^3)} < infinity,
+  then u extends smoothly past time T.
+statement_lean_skel: |
+  -- Intentionally bad: finite energy alone is not a 3D smooth continuation criterion.
+  theorem lemma_0004_bad_energy_only_continuation
+    (u : SmoothPeriodicNSESolution T3)
+    (henergy : SupTime (fun t => L2Norm (u t)) 0 T < infinity) :
+    ExtendsSmoothlyPast u T := by
+    sorry
+type: intentionally_bad_scaling
+related_known:
+  - Leray1934
+  - BuckmasterVicol2017
+  - THEOREM_MAP:weak-solution-guardrail
+why_interesting: |
+  Negative-control seed. Leray-Hopf energy control exists at weak level, but
+  finite energy alone is far below what is known to imply 3D smooth continuation.
+  The evaluator should reject this as scaling/known-results inconsistent.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: scaling_check
+  reason: L2 energy control is not a scaling-critical or known sufficient
+    regularity criterion for the 3D Clay smooth problem.
+status: pending

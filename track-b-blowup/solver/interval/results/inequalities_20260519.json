@@ -1,0 +1,88 @@
+[
+  {
+    "description": "Taylor-Green diagnostic divergence stays below 1e-10.",
+    "evidence": {
+      "source": "TG_N64_t10/diagnostics_summary.json"
+    },
+    "id": "ineq_0001_tg_divergence_small",
+    "lhs_interval": [
+      4.1698409662588214e-16,
+      4.1898409662588217e-16
+    ],
+    "relation": "<=",
+    "rhs_interval": [
+      9.999999900000001e-11,
+      1.00000001e-10
+    ],
+    "status": "pass"
+  },
+  {
+    "description": "False control: Taylor-Green spectrum tail remains <= 0.05.",
+    "evidence": {
+      "source": "TG_N64_t10/diagnostics_summary.json"
+    },
+    "id": "ineq_0002_bad_tg_tail_le_005",
+    "lhs_interval": [
+      0.19670154804864506,
+      0.19670154804903847
+    ],
+    "relation": "<=",
+    "rhs_interval": [
+      0.04999999999995,
+      0.050000000000050004
+    ],
+    "status": "fail"
+  },
+  {
+    "description": "Tao cascade proxy weighted high-mode amplitude grows by more than 1.",
+    "evidence": {
+      "not_true_nse": true,
+      "source": "tao_truncated_cascade_20260519/summary.json"
+    },
+    "id": "ineq_0003_tao_proxy_weighted_growth",
+    "lhs_interval": [
+      4.924455658811889,
+      4.924455658821737
+    ],
+    "relation": ">",
+    "rhs_interval": [
+      0.999999999999,
+      1.000000000001
+    ],
+    "status": "pass"
+  },
+  {
+    "description": "False control: Kida scenario enstrophy is nonincreasing over the cheap run.",
+    "evidence": {
+      "source": "kida_20260519/summary.json"
+    },
+    "id": "ineq_0004_bad_kida_enstrophy_nonincreasing",
+    "lhs_interval": [
+      4.287139658357426,
+      4.287139658366001
+    ],
+    "relation": "<=",
+    "rhs_interval": [
+      4.124999999995875,
+      4.125000000004125
+    ],
+    "status": "fail"
+  },
+  {
+    "description": "Hou-Luo-inspired scenario energy is nonincreasing over the cheap run.",
+    "evidence": {
+      "source": "houluo_20260519/summary.json"
+    },
+    "id": "ineq_0005_houluo_energy_nonincreasing",
+    "lhs_interval": [
+      0.0005103257171428703,
+      0.000510325717143891
+    ],
+    "relation": "<=",
+    "rhs_interval": [
+      0.0005121844578204077,
+      0.0005121844578214321
+    ],
+    "status": "pass"
+  }
+]

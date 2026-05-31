@@ -1,0 +1,33 @@
+id: lemma_0251
+generated_by: codex-definition-tightening-step36
+date: '2026-05-19'
+statement_en: |
+  Let u be a smooth divergence-free mean-zero solution of the 3D incompressible Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force on [0,T).
+  Let P_{<=N} be a fixed smooth Littlewood-Paley low-frequency shell projector on T^3, let u_{<=N} = P_{<=N} u, and define Pi_N^LES(u)(t) = integral_{T^3} grad u_{<=N}(t) : (P_{<=N}(u tensor u)(t) - u_{<=N}(t) tensor u_{<=N}(t)) dx.
+  If the positive flux envelope with normalization exponent alpha = 1 satisfies sum over dyadic N of N^{-alpha} integral_0^T max(Pi_N^LES(u)(t), 0) dt < infinity, then u extends smoothly past time T.
+statement_lean_skel: |
+  -- Definition-tightened dyadic flux candidate.
+  def lemma_0251_dyadic_flux_exact_statement : Prop := True
+type: hypothesis_complete_v3_definition_tightened
+related_known:
+- Step35DefinitionRules
+- THEOREM_MAP:regularity-gap
+why_interesting: Exact dyadic flux rewrite of the Step 33 selected family. It supplies shell projector convention, LES flux, normalization exponent, dyadic summability, and time norm. Survival is not truth.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  known_results_check: pending
+  novelty_check: pending
+  hypothesis_completeness_check: pending
+  endpoint_check: pending
+  convex_integration_check: pending
+  pressure_proxy_check: pending
+  definition_rule_check: pending
+  known_control_extension_check: pending
+  duplicate_family_check: pending
+  solution_class_check: pending
+status: pending
+expected_evaluator:
+  status: needs_review
+  reason: Flux-balance audit found sign/coercivity risk; this should not be an expert-review candidate until rewritten.

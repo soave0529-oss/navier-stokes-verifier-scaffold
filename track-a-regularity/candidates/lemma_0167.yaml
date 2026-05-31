@@ -1,0 +1,29 @@
+id: lemma_0167
+generated_by: codex-deterministic-variation-round-2
+date: '2026-05-19'
+statement_en: Let u be a Leray-Hopf weak solution of the 3D incompressible Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force on [0,T). If its distributional vorticity is bounded as a diagnostic, then u extends smoothly past time T.
+statement_lean_skel: '-- Deterministic candidate round 2.
+
+  def lemma_0167_weak_smooth_mixing : Prop := True
+
+  '
+type: intentionally_bad_solution_class
+related_known:
+- WeakSolutionGuardrail
+- BuckmasterVicolNonuniqueness
+why_interesting: Negative v2 control. It mixes weak-solution premises with smooth continuation conclusions.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  known_results_check: pending
+  novelty_check: pending
+  hypothesis_completeness_check: pending
+  endpoint_check: pending
+  convex_integration_check: pending
+  solution_class_check: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: solution_class_check
+  reason: Weak/smooth class boundaries must be explicit.

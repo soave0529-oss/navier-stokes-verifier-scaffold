@@ -1,0 +1,30 @@
+id: lemma_0165
+generated_by: codex-deterministic-variation-round-2
+date: '2026-05-19'
+statement_en: Let u be a smooth divergence-free mean-zero solution of the 3D incompressible Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force on [0,T). If u satisfies the Prodi-Serrin endpoint condition L^infty_t L^3_x, then u extends smoothly past time T.
+statement_lean_skel: '-- Deterministic candidate round 2.
+
+  def lemma_0165_endpoint_guardrail : Prop := True
+
+  '
+type: intentionally_bad_endpoint
+related_known:
+- Prodi1959
+- Serrin1962
+- EndpointGuardrail
+why_interesting: Negative v2 control. Endpoint cases need separate ESS/critical-space treatment.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  known_results_check: pending
+  novelty_check: pending
+  hypothesis_completeness_check: pending
+  endpoint_check: pending
+  convex_integration_check: pending
+  solution_class_check: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: endpoint_check
+  reason: Endpoint variants should not pass as ordinary Prodi-Serrin controls.

@@ -1,0 +1,34 @@
+id: lemma_0003
+generated_by: codex-human-seed
+date: 2026-05-19
+statement_en: |
+  Let u be a smooth divergence-free solution of the 3D incompressible
+  Navier-Stokes equations on T^3. If sup_{0 <= t < T} ||u(t)||_{L^infty(T^3)}
+  <= 1, then u extends smoothly past time T.
+statement_lean_skel: |
+  -- Intentionally bad: absolute velocity threshold is not Galilean invariant.
+  theorem lemma_0003_bad_galilean_absolute_velocity
+    (u : SmoothPeriodicNSESolution T3)
+    (hbound : SupTime (fun t => LInfinityNorm (u t)) 0 T <= 1) :
+    ExtendsSmoothlyPast u T := by
+    sorry
+type: intentionally_bad_galilean
+related_known:
+  - GalileanInvariance
+  - ProdiSerrin
+why_interesting: |
+  Negative-control seed. The statement uses an absolute velocity threshold.
+  A Galilean boost u(x,t) -> u(x - c t,t) + c can violate the threshold without
+  changing the underlying regularity class.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: galilean_check
+  reason: Absolute L-infinity velocity threshold changes under Galilean boosts.
+status: pending

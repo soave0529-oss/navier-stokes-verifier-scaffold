@@ -1,0 +1,38 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Generated research outputs
+papers/
+/runs/
+track-a-regularity/eval_logs/
+track-a-regularity/reports/
+track-b-blowup/runs/*/
+!track-b-blowup/runs/TG_N64_t10/
+!track-b-blowup/runs/TG_N64_t10/diagnostics_summary.json
+!track-b-blowup/runs/tao_truncated_cascade_20260519/
+!track-b-blowup/runs/tao_truncated_cascade_20260519/summary.json
+!track-b-blowup/runs/kida_20260519/
+!track-b-blowup/runs/kida_20260519/summary.json
+!track-b-blowup/runs/houluo_20260519/
+!track-b-blowup/runs/houluo_20260519/summary.json
+
+# Lean build/cache artifacts
+track-c-formal/lean/.lake/
+track-c-formal/lean/build/
+track-c-formal/lean/lake-packages/
+
+# Large numeric artifacts
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.png
+*.pdf

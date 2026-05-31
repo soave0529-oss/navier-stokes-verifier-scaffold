@@ -1,0 +1,21 @@
+id: lemma_0098
+generated_by: codex-deterministic-variation-round-1
+date: '2026-05-19'
+statement_en: Let u be a smooth divergence-free mean-zero solution of the 3D incompressible Navier-Stokes equations on T^3. If the vorticity omega = curl u satisfies integral_0^T ||omega(t)||_{L^infinity(T^3)} dt < infinity, then u extends smoothly past time T.
+statement_lean_skel: "-- Deterministic candidate round 1.\ntheorem lemma_0098_bkm_known_control\n  (u : SmoothPeriodicNSESolution T3) :\n  ExtendsSmoothlyPast u T := by\n  sorry\n"
+type: blow_up_criterion
+related_known:
+- BKM1984
+- THEOREM_MAP:BKM
+why_interesting: Positive-control variation of the BKM continuation criterion.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+status: pending
+expected_evaluator:
+  status: pass
+  reason: Known BKM-style control should survive the cheap filters.

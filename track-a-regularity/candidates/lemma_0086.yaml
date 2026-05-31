@@ -1,0 +1,22 @@
+id: lemma_0086
+generated_by: codex-deterministic-variation-round-1
+date: '2026-05-19'
+statement_en: In the Re=1600 Taylor-Green validation scenario used by Track B, the high-frequency spectrum-tail diagnostic remains <= 0.02 for every sampled time 0 <= t <= 10.
+statement_lean_skel: "-- Deterministic candidate round 1.\ntheorem lemma_0086_bad_taylor_green_tail_bound\n  (u : SmoothPeriodicNSESolution T3) :\n  ExtendsSmoothlyPast u T := by\n  sorry\n"
+type: intentionally_bad_numerical
+related_known:
+- Step6TaylorGreen
+- Step7Diagnostics
+why_interesting: Negative numerical variation. Existing TG_N64_t10 diagnostics have spectrum_tail above these bounds.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: taylor_green_test
+  reason: Existing Step 7 diagnostics falsify the proposed spectrum-tail bound.

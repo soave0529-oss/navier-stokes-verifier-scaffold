@@ -1,0 +1,28 @@
+id: lemma_0118
+generated_by: codex-deterministic-variation-round-2
+date: '2026-05-19'
+statement_en: If a smooth solution has a bounded frequency envelope diagnostic, then it extends smoothly.
+statement_lean_skel: '-- Deterministic candidate round 2.
+
+  def lemma_0118_missing_hypotheses : Prop := True
+
+  '
+type: intentionally_bad_missing_hypotheses
+related_known:
+- Step21HypothesisCompleteness
+why_interesting: Negative v2 control. It intentionally omits the domain, equation, time interval, and viscosity.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  known_results_check: pending
+  novelty_check: pending
+  hypothesis_completeness_check: pending
+  endpoint_check: pending
+  convex_integration_check: pending
+  solution_class_check: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: hypothesis_completeness_check
+  reason: Evaluator v2 should require explicit PDE hypotheses.

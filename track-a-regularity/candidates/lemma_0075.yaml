@@ -1,0 +1,22 @@
+id: lemma_0075
+generated_by: codex-deterministic-variation-round-1
+date: '2026-05-19'
+statement_en: Let u be a smooth divergence-free solution of the 3D incompressible Navier-Stokes equations on T^3. If sup_{0 <= t < T} ||u(t)||_L-infinity(T^3) <= 8.0, then u extends smoothly past time T.
+statement_lean_skel: "-- Deterministic candidate round 1.\ntheorem lemma_0075_bad_galilean_velocity_threshold\n  (u : SmoothPeriodicNSESolution T3) :\n  ExtendsSmoothlyPast u T := by\n  sorry\n"
+type: intentionally_bad_galilean
+related_known:
+- GalileanInvariance
+- ProdiSerrin
+why_interesting: Negative variation. Absolute velocity thresholds are destroyed by Galilean boosts and should not survive.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: galilean_check
+  reason: Absolute velocity thresholds are not Galilean invariant.

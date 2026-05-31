@@ -1,0 +1,29 @@
+id: lemma_0208
+generated_by: codex-deterministic-variation-round-3
+date: '2026-05-19'
+statement_en: Let u be a smooth divergence-free mean-zero solution of the 3D incompressible Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force on [0,T). If the geometric depletion factor in the vortex-stretching term is integrable in a critical norm on [0,T) with cycle-0 normalization conventions made explicit, then u extends smoothly past time T.
+statement_lean_skel: '-- Deterministic candidate round 3.
+
+  def lemma_0208_depleted_vortex_stretching : Prop := True
+
+  '
+type: hypothesis_complete_v3_unresolved
+related_known:
+- Step31EvaluatorV3
+- THEOREM_MAP:regularity-gap
+why_interesting: Geometric depletion candidate requiring later precise definitions.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  known_results_check: pending
+  novelty_check: pending
+  hypothesis_completeness_check: pending
+  endpoint_check: pending
+  convex_integration_check: pending
+  solution_class_check: pending
+status: pending
+expected_evaluator:
+  status: fail
+  first_expected_failure: geometric_known_result_check
+  reason: Depleted vortex-stretching language overlaps known geometric depletion/vorticity-direction criteria until exact novelty is supplied.

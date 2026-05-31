@@ -1,0 +1,39 @@
+id: lemma_0002
+generated_by: codex-human-seed
+date: 2026-05-19
+statement_en: |
+  Let u be a smooth divergence-free mean-zero solution of the 3D incompressible
+  Navier-Stokes equations on T^3 with viscosity nu > 0 and zero force, defined
+  on [0,T). If u belongs to the Prodi-Serrin class
+  L^p(0,T; L^q(T^3)) with q > 3 and 2/p + 3/q <= 1, then u extends smoothly
+  past time T.
+statement_lean_skel: |
+  -- Prodi-Serrin continuation criterion, target skeleton only.
+  theorem lemma_0002_prodi_serrin_continuation
+    (u : SmoothPeriodicNSESolution T3)
+    (hpq : 2 / p + 3 / q <= 1)
+    (hq : 3 < q)
+    (hclass : MemBochnerLpLq u p q 0 T) :
+    ExtendsSmoothlyPast u T := by
+    sorry
+type: blow_up_criterion
+related_known:
+  - Prodi1959
+  - Serrin1962
+  - THEOREM_MAP:Prodi-Serrin
+why_interesting: |
+  Positive-control seed for scaling and known-results checks. The equality
+  case is critical; the strict q > 3 condition avoids the endpoint L^infty_t
+  L^3_x issue that needs separate ESS handling.
+evaluator:
+  scaling_check: pending
+  galilean_check: pending
+  taylor_green_test: pending
+  beltrami_test: pending
+  bkm_consistency: pending
+  numerical_falsification: pending
+expected_evaluator:
+  status: pass
+  reason: Standard Prodi-Serrin regularity criterion; should pass known-results
+    consistency and scaling checks.
+status: pending
