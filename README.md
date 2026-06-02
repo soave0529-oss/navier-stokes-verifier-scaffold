@@ -59,6 +59,9 @@ Run a short Taylor-Green smoke test:
 PYTHONPATH=track-b-blowup/solver pytest -q tests/test_solver_taylor_green.py
 ```
 
+For the current public verification surface and promotion policy, see
+[`docs/STATUS.md`](docs/STATUS.md).
+
 ## What Was Excluded
 
 This public tree is a sanitized extraction. It intentionally excludes large
