@@ -23,12 +23,7 @@ Recommended local smoke commands:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
-pytest -q
-PYTHONPATH=track-a-regularity/evaluator \
-  python track-a-regularity/evaluator/run_all.py \
-  track-a-regularity/candidates/lemma_0001.yaml \
-  track-a-regularity/candidates/lemma_0005.yaml \
-  --check-expected
+bash scripts/verify_public.sh
 ```
 
 ## Promotion Policy

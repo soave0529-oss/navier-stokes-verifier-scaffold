@@ -16,7 +16,7 @@ Contributions are welcome if they preserve the verifier-first contract.
 
 ```bash
 python -m pip install -e ".[dev]"
-pytest -q
+bash scripts/verify_public.sh
 ```
 
 Lean changes should be checked from `track-c-formal/lean` with the local Lean
